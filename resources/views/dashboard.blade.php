@@ -28,7 +28,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-white invoice-num">2478</h2>
+                    <h2 class="text-white invoice-num">{{$hello}}</h2>
                     <span class="text-white fs-18">Total Machine</span>
                 </div>
             </div>
@@ -45,8 +45,8 @@
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-white invoice-num">2478</h2>
-                    <span class="text-white fs-18">Complaint`s Code</span>
+                    <h2 class="text-white invoice-num">{{$complainclose->count()}}</h2>
+                    <span class="text-white fs-18">Complaint`s Open</span>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-white invoice-num">2478</h2>
+                    <h2 class="text-white invoice-num">{{$user->count()}}</h2>
                     <span class="text-white fs-18">Total Employees</span>
                 </div>
             </div>

@@ -24,11 +24,11 @@
                                         <thead>
                                             <tr>
                                                 <th style="width:80px;"><strong>#</strong></th>
-                                                <th><strong>Title</strong></th>
-                                                <th><strong>Complaint Number</strong></th>
-                                                <th><strong>Description</strong></th>
+                                                <th><strong>Machine Name</strong></th>
+                                                <th><strong>Geo_location</strong></th>
+                                                {{-- <th><strong>Description</strong></th>
                                                 <th><strong>Raised By</strong></th>
-                                                <th><strong>PRICE</strong></th>
+                                                <th><strong>PRICE</strong></th> --}}
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -37,14 +37,14 @@
 
                                             <tr>
                                                 <td><strong>01</strong></td>
-                                                <td>{{$datas->title}}</td>
-                                                <td>{{$datas->complaint_number}}</td>
-                                                <td>{{$datas->description}}</td>
                                                 <td>{{$datas->name}}</td>
+                                                <td>{{$datas->geo_location}}</td>
+                                                {{-- <td>{{$datas->description}}</td> --}}
+                                                {{-- <td>{{$datas->name}}</td> --}}
                                                 {{-- <td><span class="badge light badge-success">Successful</span></td> --}}
                                                 {{-- <td>$21.56</td> --}}
                                                 <td>
-													<a style="padding: 15px 30px;background-color:green" class="dropdown-item" href="{{url('/complain/view')}}/{{$datas->id}}">View</a>
+													<a style="padding: 15px 30px;background-color:green" class="dropdown-item" href="{{url('/machine/view')}}/{{$datas->eid}}">View</a>
 												</td>
                                             </tr>
 

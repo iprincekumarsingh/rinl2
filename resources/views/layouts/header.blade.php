@@ -114,6 +114,7 @@
                         <li><a href="index.html"></a></li>
                         <li><a href="{{'/dashboard'}}">Dashboard</a></li>
                         <li><a href="{{'/addmachine'}}">Add Machine</a></li>
+                        <li><a href="{{'/machine'}}"> Machine</a></li>
                         <li><a href="{{url('complains')}}">Complaint`s</a></li>
                         <li><a href="{{url('scan')}}">Scan Machine</a></li>
                         {{-- <li><a href="{{'admin.users'}}">Users</a></li> --}}

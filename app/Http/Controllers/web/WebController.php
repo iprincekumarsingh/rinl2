@@ -53,7 +53,7 @@ class WebController extends Controller
         $name = $req->file('image')->getClientOriginalName();
         $qr = $req['name'] . rand(12, 3298);
         echo $qr;
-        $path = $req->file('image')->store('public/images/machine');
+        $path = $req->file('image')->store('uploads/machine/');
         Machine::create(
             [
                 'name' => $req['name'],
@@ -67,7 +67,7 @@ class WebController extends Controller
         $data['qrcode'] = QrCode::size(600)->generate('Welcome to');
 
         // Store QR code for download
-        QrCode::generate('Welcome to Makitweb', public_path('images/qr/' . $qr . '.svg'));
+        // QrCode::generate('Welcome to Makitweb', store('images/qr/' . $qr . '.svg'));
 
         // return view('qr',$data);
         return back();
