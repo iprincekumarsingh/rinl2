@@ -84,10 +84,12 @@
                                 alert( this.value );
                                 });
                                 </script>
-                                <button id="scan-result-close">Complain</button>
-                                <a href="">
-
-                                </a>
+                                <form action="{{url('log/complain')}}" method="get">
+@csrf
+                                    <textarea hidden name="uid" id="scan-result-text" cols="30"
+                                        rows="10">{text result here}</textarea>
+                                    <input type="submit" value="View Machine Deta">
+                                </form>
                                 <form action="{{url('log/complain')}}" method="get">
 @csrf
                                     <textarea hidden name="uid" id="scan-result-text" cols="30"

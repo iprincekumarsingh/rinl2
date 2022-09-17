@@ -53,7 +53,7 @@
 									<div class="card-bx bg- ms-xl-5 ms-0">
 										{{-- <img class="pattern-img" src="images/pattern/pattern11.png" alt=""> --}}
 										<div class="d-flex card-ifo text-white">
-                                            <img src="{{ Storage::url($datas->photo) }}"" alt="" srcset="">
+                                            <img src="{{ Storage::url($datas->photo) }}" alt="" srcset="">
                                             <img src="{{  Storage::url('/images/qr')}}/{{$datas->qr_code}}.svg"" alt="" srcset="">
 											{{-- <img src="images/pattern/circle.png" class="mb-4" alt=""> --}}
 

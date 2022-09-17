@@ -19,7 +19,7 @@
     <title>Relief</title>
 
     <!-- FAVICONS ICON -->
-    <link rel="shortcut icon" type="image/png" href="{{url('/images/relief-logo.png')}}" />
+    <link rel="shortcut icon" type="image/png" href="{{url('/images/logo.png')}}" />
 
     <link href="{{ url('/vendor/jquery-nice-select/css/nice-select.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ url('avendor/nouislider/nouislider.min.css') }}">
@@ -58,7 +58,7 @@
   ***********************************-->
     <div class="nav-header">
         <a href="" class="brand-logo">
-            <img width="100%" src="{{ url('logo.png') }}" alt="" srcset="">
+            <img width="80px" src="{{ url('images/logo.png') }}" alt="" srcset="">
         </a>
         <div class="nav-control">
             <div class="hamburger">
@@ -116,9 +116,13 @@
                         <li><a href="{{'/addmachine'}}">Add Machine</a></li>
                         <li><a href="{{'/machine'}}"> Machine</a></li>
                         <li><a href="{{url('complains')}}">Complaint`s</a></li>
+                        {{-- @if (Auth::user()->role == 'users') --}}
+                        {{-- @else --}}
+
                         <li><a href="{{url('scan')}}">Scan Machine</a></li>
+                        {{-- @endif --}}
                         {{-- <li><a href="{{'admin.users'}}">Users</a></li> --}}
-                        <li><a href="">Account</a></li>
+                        {{-- <li><a href="">Account</a></li> --}}
                         <li><a href="">Logout</a></li>
 
                         </li>

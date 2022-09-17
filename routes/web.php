@@ -34,7 +34,7 @@ Route::middleware([
         $user = User::get();
         $machine = Machine::get();
         $hello =   $machine->count();
-        echo $hello;
+        // echo $hello;
         return view('dashboard', compact('hello', 'complainopen', 'complainclose', 'user'));
     })->name('dashboard');
     Route::get('/users', function () {
@@ -92,4 +92,4 @@ Route::get('/qr', function () {
     QrCode::generate('Welcome to Makitweb', public_path('images/qr/mac1.svg'));
     return view('qr', $data);
 });
-// Route::get('/')
+Route::get('/generate/{id}',[WebController::class,'generate']);

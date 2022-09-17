@@ -1,4 +1,3 @@
-<a href="">Go back</a>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .qr  {
-            width: 100px;
+        .qr svg {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 500px;
+            height: 200px;
 
         }
     </style>
@@ -20,6 +23,7 @@
     <div class="qr">
         {!! $qrcode !!}
     </div>
+
 </body>
 
 </html>

@@ -13,7 +13,8 @@ class Machine extends Model
         'name',
         'machine_details',
         'photo',
-        'qr_code'
+        'qr_code',
+        'geo_location'
 
     ];
     protected $primaryKey = 'eid';

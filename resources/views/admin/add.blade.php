@@ -10,7 +10,8 @@
             </div>
             <div class="card-body">
                 <div class="form-validation">
-                    <form enctype="multipart/form-data" action="{{url('/machineadd')}}" method="POST" class="needs-validation" novalidate>
+                    <form enctype="multipart/form-data" action="{{url('/machineadd')}}" method="POST"
+                        class="needs-validation" novalidate>
                         {{-- @foreach ($data as $datas) --}}
                         @csrf
 
@@ -34,7 +35,7 @@
                                         <span class="text-danger">*</span>
                                     </label>
                                     <div class="col-lg-6">
-                                        <input value="" name="machine_details"  type="tel" class="form-control"
+                                        <input value="" name="machine_details" type="tel" class="form-control"
                                             id="validationCustom03" placeholder="Enter Machine Details" required>
                                         <div class="invalid-feedback">
                                             Descriptio
@@ -52,8 +53,20 @@
                                         <span class="input-group-text">Add</span>
                                     </div>
                                 </div>
+                                <div class="mb-3 row">
+                                    <label class="col-lg-4 col-form-label" for="validationCustom03">Geo Cordinates
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group mb-3">
+                                        <div class="form-file">
+                                            <textarea name="geo"  class="form-file-input form-control" id="demo" style="width: 200px;height:50px" ></textarea>
+                                        </div>
+                                        <span class="input-group-text">Add</span>
+                                    </div>
+                                </div>
 
-                                <input  type="text" hidden value="{{ app('request')->input('uid') }}">
+
+                                <input type="text" hidden value="{{ app('request')->input('uid') }}">
 
 
 
@@ -71,5 +84,24 @@
             </div>
         </div>
     </div>
-    {{-- content end --}}
+    <script>
+        // get visitor's location
+        var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "\nLongitude: " + position.coords.longitude;
+}
+getLocation();
+</script>
+
+
     @include('layouts.footer')

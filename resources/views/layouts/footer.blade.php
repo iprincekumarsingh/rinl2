@@ -18,10 +18,10 @@ Scripts
 <script src="./vendor/global/global.min.js"></script>
 <script src="./vendor/chart.js/Chart.bundle.min.js"></script>
 <!-- Apex Chart -->
-<script src="./vendor/apexchart/apexchart.js"></script>
+{{-- <script src="./vendor/apexchart/apexchart.js"></script> --}}
 
 <!-- Datatable -->
-<script src="./vendor/datatables/js/jquery.dataTables.min.js"></script>
+{{-- <script src="./vendor/datatables/js/jquery.dataTables.min.js"></script> --}}
 <script src="./js/plugins-init/datatables.init.js"></script>
 
 <script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
@@ -30,9 +30,9 @@ Scripts
 <script src="./js/dlabnav-init.js"></script>
 
 <!-- Apex Chart -->
-<script src="{{url('vendor/apexchart/apexchart.js')}}"></script>
-<script src=".{{url('vendor/nouislider/nouislider.min.js')}}"></script>
-<script src="{{url('vendor/wnumb/wNumb.js')}}"></script>
+{{-- <script src="{{url('vendor/apexchart/apexchart.js')}}"></script> --}}
+{{-- <script src=".{{url('vendor/nouislider/nouislider.min.js')}}"></script> --}}
+{{-- <script src="{{url('vendor/wnumb/wNumb.js')}}"></script> --}}
 
 <!-- Dashboard 1 -->
 <script src="{{url('js/dashboard/dashboard-1.js')}}"></script>

@@ -28,7 +28,7 @@
                                                 <th><strong>Complaint Number</strong></th>
                                                 <th><strong>Description</strong></th>
                                                 <th><strong>Raised By</strong></th>
-                                                <th><strong>PRICE</strong></th>
+                                                <th><strong>Complain Status</strong></th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -43,8 +43,9 @@
                                                 <td>{{$datas->name}}</td>
                                                 {{-- <td><span class="badge light badge-success">Successful</span></td> --}}
                                                 {{-- <td>$21.56</td> --}}
+                                                <td>{{$datas->c_status}} </td>
                                                 <td>
-													<a style="padding: 15px 30px;background-color:green" class="dropdown-item" href="{{url('/complain/view')}}/{{$datas->id}}">View</a>
+													<a style="padding: 15px 30px;background-color:grey;color:white" class="dropdown-item" href="{{url('/complain/view')}}/{{$datas->id}}">View</a>
 												</td>
                                             </tr>
 
