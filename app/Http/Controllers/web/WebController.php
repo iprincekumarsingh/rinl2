@@ -49,5 +49,10 @@ class WebController extends Controller
         $data['qrcode'] = QrCode::size(600)->generate($id);
         return view('qr', $data);
     }
-    
+    public function userViewMachine(Request $req)
+    {
+        $data = Machine::where('eid', $req['uid'])
+        ->get();
+        return view('userMachine',compact('data'));
+    }
 }

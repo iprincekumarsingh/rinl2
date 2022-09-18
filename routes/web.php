@@ -69,6 +69,7 @@ Route::middleware([
     Route::controller(WebController::class)->group(function () {
 
         Route::get('/addmachine', 'addm');
+        Route::get('/user-machine','userViewMachine');
         Route::post('/machineadd',  'addMachine');
     });
     // qr-testing

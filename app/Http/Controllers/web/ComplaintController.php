@@ -23,7 +23,7 @@ class ComplaintController extends Controller
 
     public function complainview(Request $request)
     {
-        // return view('complain');
+        return view('complain');
     }
     public function complain(Request $request)
     {
@@ -49,6 +49,7 @@ class ComplaintController extends Controller
 
             ]
         );
+        return redirect('/complains');
     }
     public function complainSingle($id)
     {
