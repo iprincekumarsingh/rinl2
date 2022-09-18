@@ -113,14 +113,15 @@
                     <ul aria-expanded="true">
                         <li><a href="index.html"></a></li>
                         <li><a href="{{'/dashboard'}}">Dashboard</a></li>
-                        <li><a href="{{'/addmachine'}}">Add Machine</a></li>
-                        <li><a href="{{'/machine'}}"> Machine</a></li>
-                        <li><a href="{{url('complains')}}">Complaint`s</a></li>
                         @if (Auth::user()->role == 'users')
                         <li><a href="{{url('scan')}}">Scan Machine</a></li>
                         @else
-                        @endif
+                        <li><a href="{{url('complains')}}">Complaint`s</a></li>
+                        <li><a href="{{'/addmachine'}}">Add Machine</a></li>
+                        <li><a href="{{'/machine'}}"> Machine</a></li>
+
                         <li><a href="{{'admin.users'}}">Users</a></li>
+                        @endif
 
                         {{-- <li><a href="">Account</a></li> --}}
                         <li><a href="{{url('/logout')}}">Logout</a></li>
