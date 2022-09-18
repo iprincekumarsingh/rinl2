@@ -23,7 +23,7 @@ class ComplaintController extends Controller
 
     public function complainview(Request $request)
     {
-        return view('complain');
+        // return view('complain');
     }
     public function complain(Request $request)
     {
@@ -55,7 +55,7 @@ class ComplaintController extends Controller
         $data = DB::table('machines')
             ->join('complains', 'machines.eid', '=', 'complains.eid')
             // ->join('orders', 'users.id', '=', 'orders.user_id')
-            ->where('complains.eid', '=', $id)
+            ->where('complains.id', '=', $id)
             ->select('complains.*', 'machines.name as Mname')
             ->get();
         // echo "<pre>";
