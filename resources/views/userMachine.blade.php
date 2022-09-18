@@ -53,7 +53,7 @@
 								<div class="d-xl-flex d-block align-items-start description-bx">
 									<div>
 										<h4 class="card-title">Machine Name :: {{$datas->Mname}}</h4>
-										<span class="fs-12">Lorem ipsum dolor sit amet, consectetur</span>
+                                        <span class="fs-12">Geo Cordinates : {{$datas->geo_location}}</span>
 										<p class="description mt-4">{{$datas->description}}</p>
 									</div>
 									<div class="card-bx bg- ms-xl-5 ms-0">
