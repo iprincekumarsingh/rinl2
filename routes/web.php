@@ -71,7 +71,9 @@ Route::middleware([
         Route::get('/addmachine', 'addm');
         Route::get('/user-machine','userViewMachine');
         Route::post('/machineadd',  'addMachine');
+        Route::get('/ai','speech');
     });
+
     // qr-testing
     Route::get('/machine', function () {
         $data = Machine::get();
@@ -95,3 +97,4 @@ Route::get('/qr', function () {
     return view('qr', $data);
 });
 Route::get('/generate/{id}', [WebController::class, 'generate']);
+

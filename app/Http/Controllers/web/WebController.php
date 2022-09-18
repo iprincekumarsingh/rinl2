@@ -55,4 +55,10 @@ class WebController extends Controller
         ->get();
         return view('userMachine',compact('data'));
     }
+
+    public function speech()
+    {
+        return view('speech.speech');
+        # code...
+    }
 }

@@ -122,6 +122,7 @@
 
                         <li><a href="{{'admin.users'}}">Users</a></li>
                         @endif
+                        <li><a href="{{url('/speech')}}">Speech</a></li>
 
                         {{-- <li><a href="">Account</a></li> --}}
                         <li><a href="{{url('/logout')}}">Logout</a></li>
