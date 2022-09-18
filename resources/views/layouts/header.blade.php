@@ -106,9 +106,9 @@
             <ul class="metismenu" id="menu">
 
                 <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="flaticon-025-dashboard"></i>
-                    <span class="nav-text">Dashboard</span>
-                </a>
+                        <i class="flaticon-025-dashboard"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
 
                     <ul aria-expanded="true">
                         <li><a href="index.html"></a></li>
@@ -117,29 +117,30 @@
                         <li><a href="{{'/machine'}}"> Machine</a></li>
                         <li><a href="{{url('complains')}}">Complaint`s</a></li>
                         @if (Auth::user()->role == 'users')
-                        @else
-
                         <li><a href="{{url('scan')}}">Scan Machine</a></li>
+                        @else
                         @endif
-                        {{-- <li><a href="{{'admin.users'}}">Users</a></li> --}}
+                        <li><a href="{{'admin.users'}}">Users</a></li>
+
                         {{-- <li><a href="">Account</a></li> --}}
                         <li><a href="{{url('/logout')}}">Logout</a></li>
 
-                        </li>
-                    {{-- </ul> --}}
                 </li>
+                {{--
+            </ul> --}}
+            </li>
 
 
             </ul>
             {{-- <div class="copyright">
-			  <p>
-				<strong>Dompet Payment Admin Dashboard</strong> © 2021 All Rights
-				Reserved
-			  </p>
-			  <p class="fs-12">
-				Made with <span class="heart"></span> by DexignLab
-			  </p>
-			</div> --}}
+                <p>
+                    <strong>Dompet Payment Admin Dashboard</strong> © 2021 All Rights
+                    Reserved
+                </p>
+                <p class="fs-12">
+                    Made with <span class="heart"></span> by DexignLab
+                </p>
+            </div> --}}
         </div>
     </div>
     <!--**********************************
@@ -148,5 +149,3 @@
     <div class="content-body">
         <!-- row -->
         <div class="container-fluid">
-
-
