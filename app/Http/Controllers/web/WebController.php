@@ -14,35 +14,8 @@ class WebController extends Controller
 {
     //
 
-    public function complainview(Request $request)
-    {
-        return view('complain');
-    }
-    public function complain(Request $request)
-    {
-        $validatedData = $request->validate([
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
 
-        ]);
 
-        $name = $request->file('image')->getClientOriginalName();
-
-        $path = $request->file('image')->store('public/images');
-        $rand = rand(12223, 235343);
-
-        Complain::create(
-            [
-                'title' => $request['title'],
-                'complaint_number' => $rand,
-                'description' => $request['desc'],
-                'photo' => $path,
-                'eid' => 1,
-                'name' => Auth::user()->name,
-                'c_status' => 'pending'
-
-            ]
-        );
-    }
     public function addm()
     {
         # code...
@@ -76,4 +49,5 @@ class WebController extends Controller
         $data['qrcode'] = QrCode::size(600)->generate($id);
         return view('qr', $data);
     }
+    
 }

@@ -123,7 +123,7 @@
                         {{-- @endif --}}
                         {{-- <li><a href="{{'admin.users'}}">Users</a></li> --}}
                         {{-- <li><a href="">Account</a></li> --}}
-                        <li><a href="">Logout</a></li>
+                        <li><a href="{{url('/logout')}}">Logout</a></li>
 
                         </li>
                     {{-- </ul> --}}
